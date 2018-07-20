@@ -1,0 +1,18 @@
+.actions-form{
+  text-align:center;
+  padding: 25px;
+  background:url("/images/charity.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+  width: 100%;
+  background-color:$text-color;
+  min-height:700px;
+  color:$brand-primary;
+  font-weight:900;
+  h2{
+    font-size:3em;
+  }
+  p{
+    font-size:1.5em;
+  }
+}

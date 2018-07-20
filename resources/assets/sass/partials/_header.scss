@@ -1,0 +1,26 @@
+.header{
+    border-bottom:1px solid $text-color;
+    .row{
+        margin: auto 50px;
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+        }
+        h1{
+            text-align: right;
+        }
+        nav{
+            text-align: right;
+            li{
+                display:inline-flex;
+                a{
+                    padding: auto 25px;
+                    font-size: $font-size-base;
+                    letter-spacing: .1rem;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

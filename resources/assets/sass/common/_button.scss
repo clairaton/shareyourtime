@@ -1,0 +1,13 @@
+a.btn{
+  background-color:$brand-primary;
+  color:$panel-default-heading-bg;
+  padding:5px 10px;
+  border:2px solid $brand-primary;
+  border-radius:3px;
+  margin:auto 5px;
+  &:hover{
+    background-color:$panel-default-heading-bg;
+    color:$brand-primary;
+    font-weight:900;
+  }
+}
