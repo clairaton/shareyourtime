@@ -10,4 +10,13 @@ a.btn{
     color:$brand-primary;
     font-weight:900;
   }
+  &.btn-log{
+    background-color:$text-color;
+    border:2px solid $text-color;
+    font-weight:900;
+    &:hover{
+      background-color:$panel-default-heading-bg;
+      color:$text-color;
+    }
+  }
 }

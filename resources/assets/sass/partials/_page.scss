@@ -1,20 +1,28 @@
+.home{
+  .actions-form{
+    position: relative;
+    background:url("/images/charity.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    background-color:$text-color;
+    min-height:700px;
+    .search-action{
+      position:absolute;
+      bottom:0;
+      padding-bottom:100px;
+    }
+  }
+}
+
 .actions-form{
-  position: relative;
   text-align:center;
   padding: 25px;
-  background:url("/images/charity.jpg");
-  background-size: cover;
-  background-repeat:no-repeat;
-  width: 100%;
-  background-color:$text-color;
-  min-height:700px;
   color:$brand-primary;
   font-weight:900;
   .search-action{
-    position:absolute;
-    bottom:0px;
-    margin-bottom:20px;
     text-align:center;
+    width:100%;
   }
   h2{
     font-size:3em;
