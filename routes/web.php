@@ -12,3 +12,10 @@
 */
 
 Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'home']);
+
+Route::get('/actions', ['uses' =>'ActionsController@index']);
+
+Route::get('/actions/{type}', ['uses' =>'ActionsController@displayType']);
+
+Route::get('/action/{action}', ['uses' =>'ActionsController@show']);
+
