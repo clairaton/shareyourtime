@@ -14,7 +14,6 @@
     }
   }
 }
-
 .actions-form{
   text-align:center;
   padding: 25px;
@@ -26,6 +25,8 @@
   }
   h2{
     font-size:3em;
+    text-transform:uppercase;
+    text-shadow: 1px 1px 1px $panel-default-heading-bg;
   }
   p{
     font-size:1.5em;
