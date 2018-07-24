@@ -9,7 +9,7 @@
         <span>Du <date>{{$action->action_begin}}</date><span> au </span><date>{{$action->action_end}}</date>
       </p>
       <p>proposée par :{{$action->request_company_id}}</p>
-      <a href="/action/{{$action->id}}" title="" class="btn">Voir le détail</a>
+      <a href="/actions/{{$action->action_type}}/{{$action->id}}" title="" class="btn">Voir le détail</a>
     </article>
   @endforeach
 </section>
