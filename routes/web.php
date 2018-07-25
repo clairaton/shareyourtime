@@ -28,12 +28,12 @@ Route::get('/actions', ['uses' =>'ActionsController@index', 'as' => 'actions']);
 /*
 * Display all available actions for a defined Type
 */
-Route::get('/actions/{type}', ['uses' =>'ActionsController@displayType', 'as' => 'catAction'])->where('type','[a-z]+');
+Route::get('/categorie/{type}/actions', ['uses' =>'ActionsController@displayType', 'as' => 'catAction'])->where('type','[a-z]+');
 
 /*
 * Display a choosen action
 */
-Route::get('/actions/{type}/{action}', ['uses' =>'ActionsController@show', 'as' => 'singleAction'])->where('type','[a-z]+');
+Route::get('/actions/{action}', ['uses' =>'ActionsController@show', 'as' => 'singleAction'])->where('type','[a-z]+');
 
 /*
 * Display actions after submitting the action search form

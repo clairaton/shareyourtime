@@ -22,7 +22,9 @@ class ActionsController extends Controller
   * @return: all available of the given type datas of the actions table on the actions view
   */
   public function displayType($type){
-    $actions = Action::where('action_type',$type)->orderBy('updated_at', 'DESC')->get();
+    $actions = Action::where('action_type',$type)
+    ->orderBy('updated_at', 'DESC')
+    ->get();
     return view('actions.actions', compact('actions'));
   }
 
@@ -31,12 +33,12 @@ class ActionsController extends Controller
   * @param: $id of the action
   * @return: the action choosen on the action single view
   */
-  public function show($type,Action $action){
+  public function show(Action $action){
     return view('actions.action', compact('action'));
   }
 
   /**
-  * Display actions list after submitting the a search form
+  * Diplay actions list after submitting the a search form
   * @param: id of the action to modify if modifying else nothing
   * @return: the action validation status
   */
@@ -48,7 +50,7 @@ class ActionsController extends Controller
     if($type=='all'){
       return ActionsController::index();
     }else{
-      return redirect('/actions/'.$type);
+      return redirect('/categorie/'.$type.'/actions');
     }
   }
 
@@ -65,6 +67,12 @@ class ActionsController extends Controller
   * @return: redirect to the actions page
   */
   public function store(){
+    // validate information from the form
+    $this->validate(request(),[
+      'actionName'=>'required',
+      'actionDesc'=>'required',
+      'actionType'=>'required'
+    ]);
     // Create a new action using the request data
     $action =new Action;
     $action->action_name=request('actionName');

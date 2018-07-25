@@ -1,7 +1,7 @@
 
-<section class="search-list">
+<section class="search-list row">
   @foreach ($actions as $action)
-    <article class="action">
+    <article class="action col-xs-12 col-md-6 col-lg-4">
       <h2>{{$action->action_name}}</h2>
       <p><span>Type: </span>{{$action->action_type}}</p>
       <p>à {{$action->action_location}}</p>
@@ -9,7 +9,7 @@
         <span>Du <date>{{$action->action_begin}}</date><span> au </span><date>{{$action->action_end}}</date>
       </p>
       <p>proposée par :{{$action->request_company_id}}</p>
-      <a href="/actions/{{$action->action_type}}/{{$action->id}}" title="" class="btn">Voir le détail</a>
+      <a href="/actions/{{$action->id}}" title="" class="btn">Voir le détail</a>
     </article>
   @endforeach
 </section>
