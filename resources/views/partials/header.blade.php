@@ -7,8 +7,8 @@
             <h1 class="slogan">Redonnez de la valeur à l'ACTION sociale & environnementale</h1>
             <nav class="links d-none d-md-inline-flex justify-content-end">
                 <ul>
-                    <li><a href="#" class="btn">Je propose des Action</a></li>
-                    <li><a href="#" class="btn">Je donne de mon temps</a></li>
+                    <li><a href="/action/create" class="btn">Je propose des Action</a></li>
+                    <li><a href="/" class="btn">Je donne de mon temps</a></li>
                     <li><a href="#" class="btn btn-log">Connexion</a></li>
                 </ul>
             </nav>

@@ -4,11 +4,11 @@
   {{ csrf_field() }}
   <div class="form-group">
     <label for="actionName">Nom de l'action</label>
-    <input type="text" id="actionName" name="actionName">
+    <input type="text" id="actionName" name="actionName" required>
   </div>
   <div class="form-group">
     <label for="actionType">Type d'action</label>
-    <select id="actionType" name="actionType">
+    <select id="actionType" name="actionType" required>
       <option value="sociale">Actions Sociale</option>
       <option value="environnement">Actions Environnementales</option>
       <option value="civil">Actions Civiles</option>
@@ -19,18 +19,18 @@
     <textarea name="actionDesc" id="actionDesc" rows="20" required placeholder="description de l'action"></textarea>
   </div>
   <div class="form-group">
-  <div class="form-group">
     <label for="actionBegin">Date de début</label>
-    <input type="date" id="actionBegin" name="actionBegin">
+    <input type="date" id="actionBegin" name="actionBegin" >
   </div>
   <div class="form-group">
     <label for="actionEnd">Date de fin</label>
-    <input type="date" id="actionEnd" name="actionEnd">
+    <input type="date" id="actionEnd" name="actionEnd" >
   </div>
   <div class="form-group">
-    <label for="actionLOcation">Localisation</label>
-    <input type="text" id="actionLocation" name="actionLocation">
+    <label for="actionLocation">Localisation</label>
+    <input type="text" id="actionLocation" name="actionLocation" >
   </div>
   <input type="submit" class="btn" value="Enregistrer">
 </form>
+@include ('partials.form-errors')
 </section>

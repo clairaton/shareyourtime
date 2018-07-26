@@ -7,7 +7,9 @@
       </p>
     <div>{{$action->action_desc}}</div>
     <p>proposée par :{{$action->request_company_id}}</p>
-</section>
-<section class="subcscribe">
-  <a href="/actions/{{$action->id}}/subcscription" class="btn">S'inscrire</a>
+
+  <a href="/actions/{{$action->id}}/subcscription" class="btn subscribe d-inline-flex">S'inscrire</a>
+  <a href="/action/{{$action->id}}/update" class="btn btn-update modify d-inline-flex">Modifier</a>
+  <a href="/action/{{$action->id}}/delete" class="btn btn-delete delete d-inline-flex">Supprimer</a>
+
 </section>

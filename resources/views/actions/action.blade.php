@@ -6,7 +6,7 @@
       @include('partials/actions/single')
       </div>
       <aside class="col-xs-12 col-md-4 col-lg-3">
-        @include('partials/action-form')
+        {{--@include('partials/action-form')--}}
       </aside>
     </div>
   </div>
