@@ -41,13 +41,26 @@ Route::get('/actions/{action}', ['uses' =>'ActionsController@show', 'as' => 'sin
 Route::post('/actions', ['uses' => 'ActionsController@list', 'as' => 'actionList']);
 
 /*
-* Display the action submitting form
+* Display the creation submitting form for action
 */
-Route::get('/action/create',['uses'=>'ActionsController@create']);
+Route::get('/action/create',['uses'=>'ActionsController@create', 'as' => 'actionCreation']);
 
 /*
-* Display all available actions
+* Store a new action
 */
 Route::post('/action/create',['uses'=>'ActionsController@store']);
 
+/*
+* Display the creation submitting form for action
+*/
+Route::get('/action/{action}/update',['uses'=>'ActionsController@displayUpdate','as' => 'actionUpdate']);
 
+/*
+* Display an action after updating it
+*/
+Route::post('/action/{action}/update',['uses'=>'ActionsController@update']);
+
+/*
+* Display an action after updating it
+*/
+Route::get('/action/{action}/delete',['uses'=>'ActionsController@delete']);

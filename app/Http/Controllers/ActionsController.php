@@ -71,7 +71,10 @@ class ActionsController extends Controller
     $this->validate(request(),[
       'actionName'=>'required',
       'actionDesc'=>'required',
-      'actionType'=>'required'
+      'actionType'=>'required',
+      'actionBegin'=>'required',
+      'actionEnd'=>'required',
+      'actionLocation'=>'required'
     ]);
     // Create a new action using the request data
     $action =new Action;
@@ -85,7 +88,55 @@ class ActionsController extends Controller
     // Save it into the db
     $action->save();
     // Redirect to actions page
-    return redirect('/actions/'.$action->action_type);
+    return redirect('/actions');
+  }
+
+  /**
+  * Update an action
+  * @return: redirect to the actions page
+  */
+  public function displayUpdate(Action $action){
+    // Redirect to actions page
+    return view('actions.update', compact('action'));
+  }
+
+  /**
+  * Update an action
+  * @return: redirect to the action updated page
+  */
+  public function update(Action $action){
+    // validation information form the form
+    $this->validate(request(),[
+      'actionName'=>'required',
+      'actionDesc'=>'required',
+      'actionEnd'=>'required',
+    ]);
+    // Create a new action using the request data
+    $action->action_name=request('actionName');
+    $action->action_desc=request('actionDesc');
+    $action->action_type=request('actionType');
+    $action->action_begin=request('actionBegin');
+    $action->action_end=request('actionEnd');
+    $action->action_location=request('actionLocation');
+    $action->request_company_id=1;
+    // Save it into the db
+    $action->save();
+    // Save it into the db
+
+    // Redirect to actions page
+    return redirect('/actions/'.$action->id);
+  }
+
+  /**
+  * Update an action
+  * @return: redirect to the action updated page
+  */
+  public function delete(Action $action){
+
+    // Delete it into the db
+    $action->delete();
+    // Redirect to actions page
+    return redirect('/actions');
   }
 
 
