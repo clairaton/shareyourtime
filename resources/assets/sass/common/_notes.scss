@@ -1,0 +1,19 @@
+article{
+  margin-bottom:20px;
+  .action{
+    border:1px solid #fefefe;
+    box-shadow: -3px 3px 10px 1px #e9ecef;
+    height:100%;
+    margin:auto 10px;
+    padding: 10px 20px 60px 40px;
+    position: relative;
+    //background:no-repeat left url('/images/pin-icon.png');
+    h2{
+      text-align: right;
+    }
+    .btn{
+      position:absolute;
+      bottom:20px;
+    }
+  }
+}

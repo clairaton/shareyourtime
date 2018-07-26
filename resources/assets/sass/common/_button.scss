@@ -10,13 +10,23 @@ input.btn, a.btn{
     color:$brand-primary;
     font-weight:900;
   }
-  &.btn-log{
+  &.btn-log, &.btn-update{
     background-color:$text-color;
     border:2px solid $text-color;
     font-weight:900;
     &:hover{
       background-color:$panel-default-heading-bg;
       color:$text-color;
+    }
+  }
+  &.delete{
+    background-color:$panel-default-heading-bg;
+    border:2px solid $brand-danger;
+    color:$brand-danger;
+    font-weight:900;
+    &:hover{
+      background-color:$brand-danger;
+      color:$panel-default-heading-bg;
     }
   }
 }
