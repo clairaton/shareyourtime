@@ -63,4 +63,4 @@ Route::put('/action/{action}/update',['uses'=>'ActionsController@update']);
 /*
 * Delete an action
 */
-Route::delete('/action/{action}/delete',['uses'=>'ActionsController@delete']);
+Route::get('/action/{action}/delete',['uses'=>'ActionsController@delete']);
