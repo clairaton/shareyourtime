@@ -58,9 +58,9 @@ Route::get('/action/{action}/update',['uses'=>'ActionsController@displayUpdate',
 /*
 * Display an action after updating it
 */
-Route::post('/action/{action}/update',['uses'=>'ActionsController@update']);
+Route::put('/action/{action}/update',['uses'=>'ActionsController@update']);
 
 /*
-* Display an action after updating it
+* Delete an action
 */
-Route::get('/action/{action}/delete',['uses'=>'ActionsController@delete']);
+Route::delete('/action/{action}/delete',['uses'=>'ActionsController@delete']);

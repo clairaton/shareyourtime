@@ -124,7 +124,7 @@ class ActionsController extends Controller
     // Save it into the db
 
     // Redirect to actions page
-    return redirect('/actions/'.$action->id);
+    return redirect('/actions/'.$action->id)->with('message', 'Votre modification a bien été enregistrée');
   }
 
   /**
@@ -132,7 +132,6 @@ class ActionsController extends Controller
   * @return: redirect to the action updated page
   */
   public function delete(Action $action){
-
     // Delete it into the db
     $action->delete();
     // Redirect to actions page

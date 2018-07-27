@@ -1,4 +1,9 @@
 <section class="single-action">
+  @if(session('message'))
+  <div class="alert alert-success">
+    <p>{{session('message')}}</p>
+  </div>
+  @endif
     <h2>{{$action->action_name}}</h2>
     <p><span>Type : </span>{{$action->action_type}}</p>
     <p>à {{$action->action_location}}</p>

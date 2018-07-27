@@ -1,6 +1,7 @@
 <section class="action-update-form">
 <h2>Modifier une action</h2>
 <form method="post" action="/action/{{$action->id}}/update">
+  <input type="hidden" name="_method" value="PUT">
   {{ csrf_field() }}
   <input type="hidden" id="actionId" name="actionId" value="{{$action->id}}" readonly>
   <div class="form-group">
